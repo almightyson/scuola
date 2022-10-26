@@ -1,0 +1,54 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+
+
+//inzio
+  int battleship[4][4] = {
+          { 0, 0, 0, 0 },
+          { 0, 0, 0, 0 },
+          { 0, 0, 0, 0 },
+          { 0, 0, 0, 0 }
+  };              
+        
+//mostra
+  for (int i = 0; i < 4; i++) {
+       for (int j = 0; j < 4; j++) {
+             cout << battleship[i][j] ;
+        }
+     cout<< "\n";
+   }
+
+ //variabili gioco
+ int riga,colonna;
+ 
+//richiesta per cordinate
+    cout <<"inserisci la riga ";
+    cin >> riga;
+    cout <<"inserisci la colonna ";
+    cin >> colonna;
+    
+ // inserimento nave alle cordinate date   
+    if(0<riga<4&&0<colonna<4 ){
+      battleship[riga][colonna]=1;
+    }  
+
+    cout<<"la nave è stata inserita "<< "\n";
+    
+//mostra nuova mappa della battaglia  
+cout<<"la nuova mappa è"<< "\n";
+    for (int i = 0; i < 4; i++) {
+       for (int j = 0; j < 4; j++) {
+             cout << battleship[i][j] ;
+             
+        }
+     cout<< "\n";
+   }
+ 
+ 
+
+  
+  return 0;
+}
