@@ -1,0 +1,99 @@
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+
+
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+
+
+basic manageing statments
+
+
+It is possible to write the INSERT INTO statement in two ways:
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+
+
+basic querrys
+
+
+SELECT * FROM table_name; 
+
+SELECT column1, column2, ...
+FROM table_name;
+
+The SELECT DISTINCT statement is used to return only distinct (different) values.
+SELECT DISTINCT column1, column2, ...
+FROM table_name; 
+
+The WHERE clause is used to filter records.
+The WHERE clause can be combined with AND, OR, and NOT operators.
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+
+The IS NULL operator is used to test for empty values (NULL values)
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+
+The UPDATE statement is used to modify the existing records in a table.
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
+
+The DELETE statement is used to delete existing records in a table.
+DELETE FROM Customers
+WHERE CustomerName='Alfreds Futterkiste';
+ 
+LIMIT statment
+SELECT * FROM Customers
+WHERE Country='Germany'
+LIMIT 3;
+
+The MIN() function returns the smallest value of the selected column.
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+
+The COUNT() function returns the number of rows that matches a specified criterion.
+SELECT COUNT(ProductID)
+FROM Products;
+
+The AVG() function returns the average value of a numeric column.
+SELECT AVG(Price)
+FROM Products;
+
+
+The SUM() function returns the total sum of a numeric column. 
+SELECT SUM(Quantity)
+FROM OrderDetails;
+
+The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+WHERE CustomerName LIKE 'a%'	Finds any values that start with "a"
+WHERE CustomerName LIKE '%a'	Finds any values that end with "a"
+WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position
+WHERE CustomerName LIKE '_r%'	Finds any values that have "r" in the second position
+WHERE CustomerName LIKE 'a_%'	Finds any values that start with "a" and are at least 2 characters in length
+WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
+WHERE ContactName LIKE 'a%o'	Finds any values that start with "a" and ends with "o"
+
+The IN operator is a shorthand for multiple OR conditions.
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+
