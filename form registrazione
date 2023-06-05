@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width:100%;
+            background:linear-gradient(45deg, rgb(55, 0, 255), rgb(255, 0, 123));   
+            display:flex;  
+            align-items: center;
+            justify-content: center;
+        }       
+        .form_login{
+
+            padding: 10px;
+            width: 400px;
+            height: 600px;
+            border-radius: 25px;
+            background-color: rgba(240, 248, 255, 0.29);
+        }
+        .form_login{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .riga{
+            display: flex;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 15px;
+            background-color: rgba(240, 248, 255, 0.29);
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="background">
+        <div class="form_login">
+            <div class="riga">
+                <div><img src="/img/Nell_pitt-final.ico" alt=""></div>
+            </div>
+            <div class="riga">
+                <div>name</div>
+                <div><input type="text"></div>
+            </div>
+            <div class="riga">
+                <div>cognome</div>
+                <div><input type="text"></div>
+            </div>
+            <div class="riga">
+                <div>email</div>
+                <div><input type="text"></div>
+            </div>
+            <div class="riga">
+                <div>sesso</div>
+                <div><input type="checkbox">maschio</div>
+                <div><input type="checkbox">femmina</div>
+            </div>
+            <div class="riga">
+                <div>
+                    data di nascita 
+                </div>
+                <div>
+                    <input type="date" name="" id="">
+                </div>   
+            </div>
+            <div class="riga">
+                <div>
+                    <input type="submit" value="registra">
+                </div>          
+            </div>
+           
+
+        </div>
+        
+
+
+
+    </section>
+    
+</body>
+</html>
